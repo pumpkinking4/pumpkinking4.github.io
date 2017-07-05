@@ -402,13 +402,13 @@
 		<div class="collapse navbar-collapse" id="navbarCollapse">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item">
-					<a class="nav-link navbarButton"href="index.html">Home</a>
+					<a class="nav-link navbarButton" href="index.html">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link navbarButton active" style='background-color: #a1a1a3; color: #000000;' href="projects.html">Projects</a>
+					<a class="nav-link navbarButton" href="projects.html">Projects</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link navbarButton" href="gallery.html">Tasks</a>
+					<a class="nav-link navbarButton active" href="gallery.html" style='background-color: #a1a1a3; color: #000000;'>Tasks</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link navbarButton" href="contact.html">Contact</a>
@@ -417,40 +417,31 @@
 		</div>
     </nav>
     
-	<a href="projects.html"><h1 class='projectTitleHeader'><i class='fa fa-arrow-left' style='font-size: 16px; text-align: center; vertical-align: middle; padding-right: 10px;'></i>The floor is lava</h1></a>
+	<a href="gallery.html"><h1 class='projectTitleHeader'><i class='fa fa-arrow-left' style='font-size: 16px; text-align: center; vertical-align: middle; padding-right: 10px;'></i>Einar - Fire VFX</h1></a>
 	
 	<div class="container"  style='width: 100%; max-width: 90%;'>
 		<div class="row">
 			<div class="col-lg-6">
 				<div class="card">
 					<div class="card-block">
-						<p class='smllTextHeader card-text'><b>Game description</b></p>
-						<p class="card-text">The Floor is Lava is an arcade style game where you collect gems by jumping on platforms, collecting the gems of the same color will build up your multiplier and your quota for that color will get filled faster for that level. It’s geared towards getting high scores and competing with friends in leaderboards. This indie project was made by two students from the NHTV in the Netherlands. We were tasked with making a simple but complete game and we released it on the google play store. All design was split between us, I did all the art and Thom Sip did all the programming. We made sure to make clear rules and decisions about how we wanted to make it all, so I supplied art assets in the correct manner and Thom could easily implement them instead of the placeholders.</p>
-						<p class='smllTextHeader card-text'><b>My role</b></p>
-						<p class='card-text'>All the art, UI, Menu’s, In-game etc. Most of my work was all done by making references on paper and illustrator and then making pixel art in photoshop with the pencil tool.</p>
+						<p class='smllTextHeader card-text'><b>Description</b></p>
+						<p class="card-text">There are lots of different fires in Einar, on torches, campfires, the ground and houses. There are different effects to support different types of fire. They are all particles and locked in the up-axis so the flames appear to be going up at all angles.</p><p class='smllTextHeader card-text'><b>How it works</b></p>
+						<p class='card-text'>The fires were all simulated with pyroFX in Houdini and rendered out as a texture atlas of 64 frames. It also has Houdini simulated smoke to go with it, as well as heat distortion and some sparks. The big fires are multiple sprites and their parameters can be changed from within a blueprint, this way you can change the size and look of the fire. The fires with fixed sizes (I.E. Torches, Campfire) are all single sprites with an infinite lifetime.</p>
 					</div>
-					<table class='specificProjectCardStatTable card-text'>
-						<tr><td><b>Role:</b> Artist </td><td><b>Release:</b> 30 November 2014 </td></tr>
-						<tr><td  style='padding-right: 20px;'><b>Developer:</b> Project TNT</td><td><b>Duration:</b> 2+ Months </td></tr>
-						<tr><td><b>Engine:</b> Haxeflixel</td><td><b>Team Size:</b> 2 </td></tr>
-						<tr><td><b>Platform:</b> Android, Google play store(free)</td><td><b>Programs Used: </b> 
-							<div class='col-lg-12'>
-								<table class='programsUsedStatTable'>
-									<tr>
-										<td><img src='./images/Unity_Icon.png' alt="Unity 4" class='programIcon'></td>
-										<td><img src='./images/PS_Icon.png' alt="Photoshop" class='programIcon'></td>
-										<td><img src='./images/AI_Icon.png' alt="Illustrator" class='programIcon'></td>
-										<td><img src='./images/Svn_Icon.png' alt="Tortoise SVN" class='programIcon'></td>
-									</tr>
-								</table>
-							</div>
-						</td></tr>
-					</table>
+					<div class='col-lg-12'>
+						<table class='programsUsedStatTable'>
+							<tr>
+								<td><img src='./images/UE4_Icon.png' alt="Unreal Engine 4" class='programIcon'></td>
+								<td><img src='./images/Houdini_Icon.png' alt="Houdini" class='programIcon'></td>
+								<td><img src='./images/PS_Icon.png' alt="Photoshop" class='programIcon'></td>
+							</tr>
+						</table>
+					</div>
 				</div>
 			</div>
 
 			<div class="col-lg-6 card" style='padding: 0px;  height: 100%;'>
-				<div id="myCarousel" class="carousel container"  style='padding: 0px;'> <!-- data-ride veroorzaakt autoplay -->
+				<div id="myCarousel" class="carousel container"  style='padding: 0px;' data-interval="false">
 					<div class="carousel-inner" role="listbox">
 					  
 				        <!--####	carousel item	####-->
@@ -458,10 +449,14 @@
 						<div class="carousel-item active">
 							<div class="row">
 								<div class="col-lg-12">
-									<img src='./images/card_FloorIsLava.png' alt="Card image the floor is lava" class="card-img-top VideoVersion">
+									<video id="video3" class="card-img-top VideoVersion" autoplay loop controls>
+										<source src="./video/FireFX_Current.webm" type="video/webm">
+										Your browser does not support HTML5 video.
+									</video>
 								</div>
-							</div>
+				        	</div>
 				        </div>
+						
 						
 						<!-- Left and right controls -->
 					    <div style='position: relative; margin-top: 4px; margin-bottom: 4px; text-align: center;'>
@@ -480,33 +475,6 @@
 			
 		</div>
 	</div>
-
-	<h1 class='taskGalleryHeader'>Example Tasks</h1>
-	
-	<div class="container" style="margin-left:0px; margin-right:0px; width: 100%;">
-		
-			<!--1st ROW-->
-		
-			<div class="row">
-				<!--Card-->
-				<div class="col-lg-4">
-					<a href="ingamefloorislava.html">
-					<div class="card">
-						<h4 class="card-title taskCardTitle">In-game art - The floor is lava <i class='fa fa-arrow-right taskLinkIcon'></i></h4>
-						<img src='./images/card_FloorIsLava_Ingame.png' alt="In-game art The floor is lava" class="card-img-top videoAchtergrondUses">
-						<div class="card-block">
-							<p class="card-text">All the pixel art in the floor is lava, an android game released on the google play store.</p>
-						</div>
-						<table class='taskCardStatTable card-text'>
-							<tr><td><b>Type:</b> 2D art </td><td><b>Project:</b> The floor is lava </td><td><b>Engine:</b> Haxeflixel </td></tr>
-						</table>
-					</div>
-					</a>
-				</div>
-			</div>
-			
-		</div>
-	
 	
 	<footer class="footer">
 		<div class="container" style="text-align: center;">
