@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Tristan Reimus VFX Portfolio</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+    <!-- Custom styles for this template -->
+    <style>
+    html {
+    	position: relative;
+    	min-height: 100%;
+    }
+    /* Show it is fixed to the top */
+    body {
+		min-height: 100%;
+		padding-top: 4.5rem;
+		color: white;
+		margin-bottom: 60px;
+    }
+    .footer {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		/* Set the fixed height of the footer here */
+		height: 60px;
+		line-height: 60px; /* Vertically center the text there */
+	}
+
+	.videoAchtergrondUses {
+		width:100%;
+    }
+    </style>
+    <style>
+	
+	@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed|Montserrat|Open+Sans|Overpass:400,800i');
+	
+    /* GLOBAL STYLES
+	-------------------------------------------------- */
+	/* Padding below the footer and lighter body text */
+
+	body {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+		background: #40484b; /* For browsers that do not support gradients */
+		background: -webkit-linear-gradient(#40484b, #292e2f); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(#40484b, #292e2f); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(#40484b, #292e2f); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(#40484b, #292e2f); /* Standard syntax */
+		color:#000;
+		margin-top: 50px;
+	}
+	.row > div {
+		margin: 20px 0px;
+	}
+
+
+	/* CUSTOMIZE THE CAROUSEL
+	-------------------------------------------------- */
+
+	/* Carousel base class */
+	.carousel {
+	  margin-bottom: 4rem;
+	}
+	/* Since positioning the image, we need to help out the caption */
+	.carousel-caption {
+	  z-index: 10;
+	  bottom: 3rem;
+	}
+
+	/* Declare heights because of positioning of img element */
+	.carousel-item {
+	  height: 32rem;
+	  background-color: #777;
+	}
+	.carousel-item > img {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  min-width: 100%;
+	  height: 32rem;
+	}
+
+	/* Custom CSS classes
+	-------------------------------------------------- */
+
+	.FXversionSpecificText {
+		right: 0;
+		left: 0;
+		top: 0px;
+		position: relative;
+	}
+	.ButtonsCarousel {
+		position: relative;
+		justify-content: left;
+		margin-left: 0%;
+		top: 000px;
+		right: 000px;
+		font-size: 18px;
+		color: rgb(220,220,220);
+	}
+	.carousel-indicators .active {
+		background-color: rgb(255,0,0);
+		color: rgb(255,0,0);
+	}
+	.CustomCarousel {
+		width: 1870px;
+		margin-top: 20px;
+	}
+	.CustomRightCarousel {
+		width: 1870px;
+	}
+	.VersionHeader {
+		position: absolute;
+		color: rgb(255,0,0);
+		bottom: 127px;
+		left: 140px;
+		z-index:15;
+		font-size: 25px;
+	}
+	.VideoVersion {
+		width: 900px;
+		top: 0px;
+		position: relative;
+		background-color: rgb(0,0,0);
+	}
+	.VideoCurrent {
+		width: 1280px;
+		top: 0px;
+		left: 31%;
+		position: relative;
+		background-color: rgb(0,0,0);
+	}
+	.VersionButtons {
+		height: 40px;
+	}
+	.HeaderGallery {
+		position: absolute;
+		top: 400;
+		margin-left: -250px;
+		left: 50%;
+		margin-right: -250px;
+		right: 50%;
+		width: 500px;
+	}
+	.HeaderGalleryHomePage {
+		position: absolute;
+		top: 300px;
+		margin-left: -50px;
+		left: 50%;
+		margin-right: -250px;
+		right: 50%;
+		width: 500px;
+	}
+	.HeaderVersionViewer {
+		position: absolute;
+		top: 400;
+		margin-left: -250px;
+		left: 50%;
+		margin-right: -250px;
+		margin-top: 20px;
+		right: 50%;
+		width: 500px;
+	}
+	.HeaderLatestViewer {
+		margin-top: 20px;
+	}
+	.Headerline {
+		margin-top: 3.6%;
+		border-style: solid;
+	    border-width: 2px;
+		width: 80%;
+	}
+	.CurrentVersionCarouselItem {
+		height: 100%;
+	}
+	.CurrentVersionSpecificText {
+		left: -1270px;
+		top: 0px;
+		position: relative;
+	}
+	.IntroSpecificText {
+		margin-left: -500px;
+		top: 0px;
+		position: relative;
+	}
+	.projectCardStatTable{
+		font-size: 16px; 
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+		text-align: center;
+		color: #999;
+	}
+	.projectCardTitle{
+		text-align: center;
+		margin-top: 10px;
+		margin-bottom: 5px;
+		color: #fff;
+		padding-left: 16px;
+		font-family: 'Overpass', sans-serif;
+		font-weight: 100;
+		font-size: 40px;
+		font-style: italic;
+	}
+	.linkIcon {
+	 font-size: 16px;
+	 color: #0f6bbd;
+	}
+	/* MARKETING CONTENT
+	-------------------------------------------------- */
+
+	/* Center align the text within the three columns below the carousel */
+	.marketing .col-lg-4 {
+	  margin-bottom: 1.5rem;
+	  text-align: center;
+	}
+	.marketing h2 {
+	  font-weight: normal;
+	}
+	.marketing .col-lg-4 p {
+	  margin-right: .75rem;
+	  margin-left: .75rem;
+	}
+
+
+	/* Featurettes
+	------------------------- */
+
+	.featurette-divider {
+	  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+	}
+
+	/* Thin out the marketing headings */
+	.featurette-heading {
+	  font-weight: 300;
+	  line-height: 1;
+	  letter-spacing: -.05rem;
+	}
+
+
+	/* RESPONSIVE CSS
+	-------------------------------------------------- */
+
+	@media (min-width: 40em) {
+	  /* Bump up size of carousel content */
+	  .carousel-caption p {
+	    margin-bottom: 1.25rem;
+	    font-size: 1.25rem;
+	    line-height: 1.4;
+	  }
+
+	  .featurette-heading {
+	    font-size: 50px;
+	  }
+	}
+
+	@media (min-width: 62em) {
+	  .featurette-heading {
+	    margin-top: 7rem;
+	  }
+	}
+
+	.carousel-indicators li {
+	  text-indent: 2px;
+	}
+	.navonder {
+		top: 50px;
+	}
+
+	/* Bootstrap .card overschrijven */
+	.card {
+		background-color: #2a2a30;
+		box-shadow: 0px 5px 10px rgba(0,0,0,.5);
+	    border: 1.5px solid #3c3c42;
+	    color: white;
+	}
+	
+	.navigatie_achtergrond {
+		color: white;
+		position: fixed;
+		z-index: 1030;
+		top: 0;
+		height: 50px;
+		width: 100%;
+		text-align: center;
+		background-image: url('./images/PortfolioTitleImg_Banner.png');
+	    background-attachment: fixed;
+	    background-position: top center; 
+	}
+	.pageHeader{
+		margin-top: 30px; 
+		margin-left: 30px; 
+		font-size: 36px; 
+		color: #FFF; 
+		text-shadow: 0px 5px 10px rgba(0,0,0,1); 
+		text-align: center;
+		font-family: 'Overpass', sans-serif;
+		font-weight: 100;
+		font-style: italic;
+		font-size: 40px;
+	}
+	.card-text{
+		font-family: 'Open Sans', sans-serif;
+	}
+	.nameHeader{
+		margin: auto; 
+		font-size: 18px; 
+		white-space: nowrap; 
+		font-family: 'Roboto condensed', sans-serif;
+		font-weight: 100;
+		font-size: 30px;
+	}
+	.navbarButton{
+		font-family: 'Open sans', sans-serif;
+		font-weight: 100;
+		font-size: 20px;
+	}
+	</style>
+  </head>
+  <body style="margin-bottom: 0px;">
+		<div class="navigatie_achtergrond card" style='border: 0px;'>
+			<div class='nameHeader'>Tristan Reimus - Real-time VFX and Technical Art - Portfolio</div>
+		</div>
+
+    <nav class="navonder navbar navbar-toggleable-xl navbar-inverse fixed-top bg-inverse" style='box-shadow: 0px 5px 10px rgba(0,0,0,.5); padding: 0px;'>
+		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item navbarButton">
+					<a class="nav-link" href="index.html">Home</a>
+				</li>
+				<li class="nav-item navbarButton">
+					<a class="nav-link active" style='background-color: #a1a1a3; color: #000000;' href="Projects.html">Projects</a>
+				</li>
+				<li class="nav-item navbarButton">
+					<a class="nav-link" href="gallery.html">Gallery</a>
+				</li>
+				<li class="nav-item navbarButton">
+					<a class="nav-link" href="contact.html">Contact</a>
+				</li>
+			</ul>
+		</div>
+    </nav>
+	
+	<h1 class='pageHeader'>Project gallery</h1>
+    
+		<div class="container" style="margin-left:0px; margin-right:0px; width: 100%;">
+		
+			<!--1st ROW-->
+		
+			<div class="row">
+				<!--Card 1-->
+				<div class="col-lg-6">
+					<div class="card">
+						<a href="automatician.html"><h4 class="card-title projectCardTitle">The Automatician <i class='fa fa-arrow-right' style='font-size: 16px; text-align: center; vertical-align: middle;'></i></h4></a>
+						<video id="video1" class="card-img-top videoAchtergrondUses" autoplay loop>
+							<source src="./video/Automatician_Foyer.webm" type="video/webm">
+							Your browser does not support HTML5 video.
+						</video>
+						<div class="card-block">
+							<p class="card-text">A first-person puzzle game for PC, made in Unreal Engine 4. Take the role of Emma and explore a Victorian-era mansion while helping NPC’s and solving puzzles. Some of the tasks I had in this project are VFX, level design and visual scripting.</p>				
+						</div>
+						<table class='projectCardStatTable card-text'>
+							<tr><td><b>Role:</b> VFX & Technical artist / Team Lead</td><td><b>Developer:</b> Dreampunks</td><td><b>Engine:</b> Unreal Engine 4</td><td><b>Platform:</b> PC</td></tr>
+						</table>	
+					</div>
+				</div>
+				<!--Card 2-->
+				<div class="col-lg-6">
+					<div class="card">
+						<a href="einar.html"><h4 class="card-title projectCardTitle">Einar <i class='fa fa-arrow-right' style='font-size: 16px; text-align: center; vertical-align: middle;'></i></h4></a>
+						<video id="video3" class="card-img-top videoAchtergrondUses" autoplay loop>
+							<source src="./video/Einar_Teaser.webm" type="video/webm">
+							Your browser does not support HTML5 video.
+						</video>
+						<div class="card-block">
+							<p class="card-text">Third-person action game where you fight as Einar, the Viking who channels the powers of Nordic gods and attempts to fight back the invasion of the Draugrs. I joined at the end of the development cycle and replaced all the particles and VFX.</p>
+						</div>
+						<table class='projectCardStatTable card-text'>
+							<tr><td><b>Role:</b> VFX Artist</td><td><b>Developer:</b> Dreampunks</td><td><b>Engine:</b> Unreal Engine 4</td><td><b>Platform:</b> PS4</td></tr>
+						</table>
+					</div>
+				</div>
+			
+			</div>
+		
+			<!--2nd ROW-->
+		
+			<div class="row">
+				<!--Card 3-->
+				<div class="col-lg-6">
+					<div class="card">
+						<a href="trifecta.html"><h4 class="card-title projectCardTitle">Trifecta <i class='fa fa-arrow-right' style='font-size: 16px; text-align: center; vertical-align: middle;'></i></h4></a>
+						<video id="video3" class="card-img-top videoAchtergrondUses" autoplay loop>
+							<source src="./video/ThorFX_Ingame_V1.webm" type="video/webm">
+							Your browser does not support HTML5 video.
+						</video>
+						<div class="card-block">
+							<p class="card-text">A RTS and dungeon crawler in which your able to control three ships as one, use their different abilities to progress. I made all the art in this pixel art game in a team of two.</p>
+						</div>
+						<table class='projectCardStatTable card-text'>
+							<tr><td><b>Role:</b> Artist </td><td><b>Developer:</b> Project TNT</td><td><b>Engine:</b> Haxeflixel</td><td><b>Platform:</b> PS4 </td></tr>
+						</table>
+					</div>
+				</div>
+			
+				<!--Card 4-->
+				<div class="col-lg-6">
+					<div class="card">
+						<a href="floorislava.html"><h4 class="card-title projectCardTitle">The floor is lava <i class='fa fa-arrow-right' style='font-size: 16px; text-align: center; vertical-align: middle;'></i></h4></a>
+						<video id="video1" class="card-img-top videoAchtergrondUses" autoplay loop>
+							<source src="./video/FireFX_V5.webm" type="video/webm">
+							Your browser does not support HTML5 video.
+						</video>
+						<div class="card-block">
+							<p class="card-text">An arcade style android game released on the google play store in which you need to collect gems of different colors before the time runs out. The art of this game was made by me.</p>				
+						</div>
+						<table class='projectCardStatTable card-text'>
+							<tr><td><b>Role:</b> Artist</td><td><b>Developer:</b> Project TNT</td><td><b>Engine:</b> Haxeflixel</td><td><b>Platform:</b> Android, Google play store(free)</td></tr>
+						</table>	
+					</div>
+				</div>
+			</div>
+			
+			<!--3rd ROW-->
+		
+			<div class="row">
+				<!--Card 5-->
+				<div class="col-lg-6">
+					<div class="card">
+						<a href="backintheday.html"><h4 class="card-title projectCardTitle">Back in the day <i class='fa fa-arrow-right' style='font-size: 16px; text-align: center; vertical-align: middle;'></i></h4></a>
+						<video id="video3" class="card-img-top videoAchtergrondUses" autoplay loop>
+							<source src="./video/ThorFX_Ingame_V1.webm" type="video/webm">
+							Your browser does not support HTML5 video.
+						</video>
+						<div class="card-block">
+							<p class="card-text">This is a game-jam game about an old man that remembers the adventures he had long ago. Make the right decisions to progress. I made the pixel-art animations for this game. You can find on the google play store.</p>
+						</div>
+						<table class='projectCardStatTable card-text'>
+							<tr><td><b>Role:</b> Artist</td><td><b>Developer:</b> Project TNT</td><td><b>Engine:</b> Haxeflixel</td><td><b>Platform:</b> Android, Google play store(free)</td></tr>
+						</table>
+					</div>
+				</div>
+			
+				<!--Card 6
+				<div class="col-lg-6">
+					<div class="card">
+						<a href="floorislava.html"><h4 class="card-title projectCardTitle">The floor is lava <i class='fa fa-link linkIcon'></i></h4></a>
+						<video id="video1" class="card-img-top videoAchtergrondUses" autoplay loop>
+							<source src="./video/FireFX_V5.webm" type="video/webm">
+							Your browser does not support HTML5 video.
+						</video>
+						<div class="card-block">
+							<p class="card-text">Fire FX created with Houdini pyro and tweaked for use in Unreal Engine 4. These where developed for Einar. I previously only made one fire effect in The Automatician.</p>				
+						</div>
+						<table class='projectCardStatTable card-text'>
+							<tr><td><b>Role:</b> VFX Artist </td><td><b>Developer:</b> Dreampunks </td><td><b>Engine:</b> Unreal Engine 4 </td><td><b>Platform:</b> PS4 </td></tr>
+						</table>	
+					</div>
+				</div>			-->
+			
+			</div>
+		
+			<!--paste new row here-->
+		
+		</div>
+
+	<footer class="footer">
+      <div class="container" style="text-align: center;">
+        <span class="text-muted">&copy; by Tristan Reimus, 2017</span>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.min.js"></script>
+  
+  </body>
+  
+</html>
