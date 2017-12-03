@@ -226,9 +226,9 @@
 		color: #DDD;
 	}
 	.smllTextHeader{
-		margin-bottom: 0px;
-		font-size: 16px;
-		text-decoration: underline;
+		margin-bottom: 5px;
+		font-size: 22px;
+		font-style: italic;
 	}
 	.taskCardTitle{
 		text-align: center;
@@ -258,11 +258,11 @@
 		
 	}
 	.programsUsedStatTable{
-		margin-left: 0px;
+		margin-left: auto;
+		margin-right: auto;
 		margin-bottom: 10px;
 		color: #DDD;
 		text-align: center;
-		width: 100%;
 	}
 	.taskLinkIcon{
 		font-size: 16px;
@@ -347,7 +347,7 @@
 		height: 50px;
 		width: 100%;
 		text-align: center;
-		background-image: url('./images/PortfolioTitleImg_Banner.png');
+		background-image: url('./images/PortfolioTitleImg_Banner_03.png');
 	    background-attachment: fixed;
 	    background-position: top center; 
 	}
@@ -382,6 +382,11 @@
 		font-family: 'Roboto condensed', sans-serif;
 		font-weight: 100;
 		font-size: 30px;
+		text-shadow:
+   		-1px -1px 0 #000,
+   		1px -1px 0 #000,
+   		-1px 1px 0 #000,
+   		1px 1px 0 #000;
 	}
 	.navbarButton{
 		font-family: 'Open sans', sans-serif;
@@ -389,6 +394,93 @@
 		font-size: 20px;
 	}
 	
+	/**MODAL CSS**/
+	/* Style the Image Used to Trigger the Modal */
+	#myImg {
+	    border-radius: 5px;
+	    cursor: pointer;
+	    transition: 0.3s;
+	}
+
+	#myImg:hover {opacity: 0.7;}
+
+	/* The Modal (background) */
+	.modal {
+	    display: none; /* Hidden by default */
+	    position: fixed; /* Stay in place */
+	    z-index: 2000; /* Sit on top */
+	    padding-top: 40px; /* Location of the box */
+	    left: 0;
+	    top: 0;
+	    width: 100%; /* Full width */
+	    height: 100%; /* Full height */
+	    overflow: auto; /* Enable scroll if needed */
+	    background-color: rgb(0,0,0); /* Fallback color */
+	    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+	}
+
+	/* Modal Content (Image) */
+	.modal-content {
+	    margin: auto;
+	    display: block;
+	    width: 80%;
+	    max-width: 85%;
+	}
+
+	/* Caption of Modal Image (Image Text) - Same Width as the Image */
+	#caption {
+	    margin: auto;
+	    display: block;
+	    width: 80%;
+	    max-width: 700px;
+	    text-align: center;
+	    color: #ccc;
+	    padding: 10px 0;
+	    height: 150px;
+	}
+
+	/* Add Animation - Zoom in the Modal */
+	.modal-content, #caption { 
+	    -webkit-animation-name: zoom;
+	    -webkit-animation-duration: 0.6s;
+	    animation-name: zoom;
+	    animation-duration: 0.6s;
+	}
+
+	@-webkit-keyframes zoom {
+	    from {-webkit-transform:scale(0)} 
+	    to {-webkit-transform:scale(1)}
+	}
+
+	@keyframes zoom {
+	    from {transform:scale(0)} 
+	    to {transform:scale(1)}
+	}
+
+	/* The Close Button */
+	.close {
+	    position: absolute;
+	    top: 15px;
+	    right: 35px;
+	    color: #f1f1f1;
+	    font-size: 40px;
+	    font-weight: bold;
+	    transition: 0.3s;
+	}
+
+	.close:hover,
+	.close:focus {
+	    color: #bbb;
+	    text-decoration: none;
+	    cursor: pointer;
+	}
+
+	/* 100% Image Width on Smaller Screens */
+	@media only screen and (max-width: 1280px){
+	    .modal-content {
+	        width: 100%;
+	    }
+	}
 	</style>
   </head>
   <body style="margin-bottom: 0px;">
@@ -411,7 +503,7 @@
 					<a class="nav-link navbarButton" href="projects.html">Projects</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link navbarButton active" href="gallery.html" style='background-color: #a1a1a3; color: #000000;'>Tasks</a>
+					<a class="nav-link navbarButton active" href="gallery.html" style='background-color: #a1a1a3; color: #000000;'>Gallery</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link navbarButton" href="contact.html">Contact</a>
@@ -441,27 +533,28 @@
 					</div>
 				</div>
 			</div>
-
-			<div class="col-lg-6 card" style='padding: 0px;  height: 100%;'>
-				<div id="myCarousel" class="carousel container"  style='padding: 0px;' data-interval="false">
-					<div class="carousel-inner" role="listbox">
-					  
-				        <!--####	carousel item	####-->
-						
-						<div class="carousel-item active">
-							<div class="row">
-								<div class="col-lg-12">
-									<img src='./images/card_TrifectaIngame.png' alt="In-game art Trifecta" class="card-img-top VideoVersion">
-								</div>
-							</div>
-				        </div>
-						
-						
-						<!-- Left and right controls -->
-					</div>
-				</div>
-			</div>
 			
+			<div class="col-lg-6 card" style='padding: 0px;  height: 100%;'>
+
+				<img id="myImg" src="./images/card_TrifectaIngame.png" class="container" style="margin-top: 5px" alt="3 screenshots of android game 'Trifecta'">
+
+				<!-- The Modal -->
+				<div id="myModal" class="modal">
+
+					<!-- The Close Button -->
+					<span class="close">&times;</span>
+
+					<!-- Modal Content (The Image) -->
+					<img class="modal-content" id="img01">
+
+					<!-- Modal Caption (Image Text) -->
+					<div id="caption" class="card-text"></div>
+				</div>
+
+				<p class="card-text" style="text-align: center; color: #999; font-size: 14px;">click image to zoom</p>
+
+			</div>
+
 		</div>
 	</div>
 	
@@ -470,6 +563,30 @@
 			<span class="text-muted">&copy; by Tristan Reimus, 2017</span>
 		</div>
     </footer>
+
+    <!-- Trigger the Modal -->
+	<script>
+	// Get the modal
+	var modal = document.getElementById('myModal');
+
+	// Get the image and insert it inside the modal - use its "alt" text as a caption
+	var img = document.getElementById('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	img.onclick = function(){
+	    modal.style.display = "block";
+	    modalImg.src = this.src;
+	    captionText.innerHTML = this.alt;
+	}
+
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function() { 
+	    modal.style.display = "none";
+	}
+	</script>
 
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>

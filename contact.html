@@ -228,9 +228,9 @@
 		color: #DDD;
 	}
 	.smllTextHeader{
-		margin-bottom: 0px;
-		font-size: 16px;
-		text-decoration: underline;
+		margin-bottom: 5px;
+		font-size: 22px;
+		font-style: italic;
 	}
 	.taskCardTitle{
 		text-align: center;
@@ -255,11 +255,11 @@
 		padding: 5%;	
 	}
 	.programsUsedStatTable{
-		margin-left: 0px;
+		margin-left: auto;
+		margin-right: auto;
 		margin-bottom: 10px;
 		color: #DDD;
 		text-align: center;
-		width: 100%;
 	}
 	.taskLinkIcon{
 		font-size: 16px;
@@ -349,7 +349,7 @@
 		height: 50px;
 		width: 100%;
 		text-align: center;
-		background-image: url('./images/PortfolioTitleImg_Banner.png');
+		background-image: url('./images/PortfolioTitleImg_Banner_03.png');
 	    background-attachment: fixed;
 	    background-position: top center; 
 	}
@@ -360,6 +360,11 @@
 		font-family: 'Roboto condensed', sans-serif;
 		font-weight: 100;
 		font-size: 30px;
+		text-shadow:
+   		-1px -1px 0 #000,
+   		1px -1px 0 #000,
+   		-1px 1px 0 #000,
+   		1px 1px 0 #000;
 	}
 	.navbarButton{
 		font-family: 'Open sans', sans-serif;
@@ -378,6 +383,94 @@
 	}
 	.card-text{
 		font-family: 'Open Sans', sans-serif;
+	}
+
+	/**MODAL CSS**/
+	/* Style the Image Used to Trigger the Modal */
+	#myImg {
+	    border-radius: 5px;
+	    cursor: pointer;
+	    transition: 0.3s;
+	}
+
+	#myImg:hover {opacity: 0.7;}
+
+	/* The Modal (background) */
+	.modal {
+	    display: none; /* Hidden by default */
+	    position: fixed; /* Stay in place */
+	    z-index: 2000; /* Sit on top */
+	    padding-top: 40px; /* Location of the box */
+	    left: 0;
+	    top: 0;
+	    width: 100%; /* Full width */
+	    height: 100%; /* Full height */
+	    overflow: auto; /* Enable scroll if needed */
+	    background-color: rgb(0,0,0); /* Fallback color */
+	    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+	}
+
+	/* Modal Content (Image) */
+	.modal-content {
+	    margin: auto;
+	    display: block;
+	    width: 80%;
+	    max-width: 85%;
+	}
+
+	/* Caption of Modal Image (Image Text) - Same Width as the Image */
+	#caption {
+	    margin: auto;
+	    display: block;
+	    width: 80%;
+	    max-width: 700px;
+	    text-align: center;
+	    color: #ccc;
+	    padding: 10px 0;
+	    height: 150px;
+	}
+
+	/* Add Animation - Zoom in the Modal */
+	.modal-content, #caption { 
+	    -webkit-animation-name: zoom;
+	    -webkit-animation-duration: 0.6s;
+	    animation-name: zoom;
+	    animation-duration: 0.6s;
+	}
+
+	@-webkit-keyframes zoom {
+	    from {-webkit-transform:scale(0)} 
+	    to {-webkit-transform:scale(1)}
+	}
+
+	@keyframes zoom {
+	    from {transform:scale(0)} 
+	    to {transform:scale(1)}
+	}
+
+	/* The Close Button */
+	.close {
+	    position: absolute;
+	    top: 15px;
+	    right: 35px;
+	    color: #f1f1f1;
+	    font-size: 40px;
+	    font-weight: bold;
+	    transition: 0.3s;
+	}
+
+	.close:hover,
+	.close:focus {
+	    color: #bbb;
+	    text-decoration: none;
+	    cursor: pointer;
+	}
+
+	/* 100% Image Width on Smaller Screens */
+	@media only screen and (max-width: 1280px){
+	    .modal-content {
+	        width: 100%;
+	    }
 	}
 	</style>
   </head>
@@ -401,32 +494,20 @@
 					<a class="nav-link navbarButton" href="projects.html">Projects</a>
 				</li>
 				<li class="nav-item">	
-					<a class="nav-link navbarButton" href="gallery.html">Tasks</a>
+					<a class="nav-link navbarButton" href="gallery.html">Gallery</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link navbarButton active"  style='background-color: #a1a1a3; color: #000000;' href="contact.html">Contact</a>
 				</li>
 			</ul>
 		</div>
-    </nav>
-    
-
-	
-	
-	
-	
-	
-	
-
-	
-	
-	
+    </nav>	
 	
 	<div class="container"  style='width: 100%; max-width: 90%;'>
 		<div class="row">
 			<div class="col-lg-6">
 				<h1 class='contactHeader'>Contact details</h1>
-				<div class="card" style='width: 50%;'>
+				<div class="card">
 					<div class='row' style='width: 100%; margin: auto;'>
 						<div class='col-lg-12' style='margin-right:100; text-align: -webkit-center;'>
 					
@@ -444,18 +525,6 @@
 					</div>
 				</div>
 
-			</div>
-
-			<div class="col-lg-6">
-				<h1 class='contactHeader'>More about me</h1>
-				<div class="card">
-					<div class="card-block">
-						<p class="card-text">I was born in 1995 in Utrecht and always lived close-by even though we moved around a lot. Our family always had a love for animals so we had a lot of pets at home, who we all train and play with. Other hobbies of mine are martial arts, I’ve practiced Jiu-jitsu and kickboxing for some years. Gaming was always a big part of my life, I remember getting a N64 for Christmas and being amazed at games like Mario 64 and Yoshi’s story. Soon came the PS1 with Ape Escape and Dragonball Z fighting games I played with my sister. This very quickly evolved into a fascination on how those games were made, watching many making-offs and scribbling in my notebook ‘When I grow up I want to make video games’ when I first could write. Playing games without subtitles is also how I initially learned English, eventually getting a Cambridge certificate for it in high school.</p>
-						
-						<p class="card-text">One of my dreams is to create a game that people will play and remember fondly forever, knowing that I contributed to that person’s life by almost literally creating happiness.
-						</p>				
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
